@@ -1,5 +1,5 @@
 
-let navLinks = document.getElementById("navLinks");
+let navLinks = document.getElementById("nav__list");
 let nav = document.getElementsByTagName("nav")[0];
 let logo = document.getElementsByClassName("fa-graduation-cap")[0];
 

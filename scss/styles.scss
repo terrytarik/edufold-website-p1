@@ -1,0 +1,427 @@
+@media (max-width: 385px) {
+  .course-container, .campuse-container, .facilities-container, .feedback-container {
+    width: 100%;
+  }
+
+  .course-container h1, .campuse-container h1, .facilities-container h1, .feedback-container h1 {
+    font-size: 25px;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+  
+  .enroll-content h1 {
+    font-size: 20px;
+  }
+
+  .course-container p, .campuse-container p, .facilities-container p, .feedback-container p{
+    color: #777;
+    font-size: 12px;
+  }
+
+  .course, .campuse, .facility, .feedback {
+    width: 250px;
+  }
+
+  .feedback {
+    min-width: 0;
+  }
+  .feedback h3 {
+    font-size: 15px;
+  }
+
+  .campuse {
+    width: 250px;
+  }
+
+  .campuse h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    overflow: hidden;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 0;
+    right: -150px;
+    height: 100vh;
+    width: 150px;
+    background-color: #f44336;
+    transition: 0.5s;
+  }
+  
+  nav .fa-bars {
+    display: block;
+    color: #fff;
+    font-size: 22px;
+    margin: 10px 0 0 10px;
+  }
+
+  nav .fa-xmark {
+    display: block;
+    color: #fff;
+    font-size: 22px;
+    margin: 10px 0 0 10px;
+  }
+
+  .nav-links ul{
+    flex-direction: column;
+  }
+
+  .nav-links ul li{
+    margin: 25px 0 0 10px;
+  } 
+  
+  .text-box h1 {
+    font-size: 32px;
+  } 
+}
+
+@media (max-width: 800px) {
+  #courses, #campuses, #facilities, #feedbacks {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+//color for navbar and buttons/menu item animations
+$bright-orange: #f44336;
+
+//GLOBAL SETTINGS
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+.main-text {
+  text-align: center;
+}
+
+.sub-text {
+  font-size: 16px;  
+  text-align: center;
+  padding-top: 10px;
+  line-height: 22px;
+}
+
+.button {   
+  display: inline-block;
+  padding: 12px 34px;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 0 $bright-orange;
+  transition: 0.4s;
+
+  &:hover {
+    box-shadow: inset 250px 0 0 0 $bright-orange;
+  }
+}
+
+//HEADER SECTION
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("/images/banner.png");
+  background-position: center;
+  background-size: cover;
+
+  &__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+  }
+
+  &__main-text {
+    font-size: 62px;
+  }
+
+  &__sub-text {
+    color: #fff ;
+  }
+
+  &__button {
+    position: relative;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #fff;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 6%;
+  background-color: transparent; 
+  transition: 0.3s;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &__logo-img {
+    font-size: 40px;
+    color: $bright-orange;
+  }
+
+  &__logo-text {
+    margin-left: 10px;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .fa-xmark, .fa-bars {
+    display: none;
+  }
+  
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 15px;
+    list-style-type: none;
+   
+    &::after {
+      display: block;
+      height: 2px;
+      width: 0%;
+      margin: auto;
+      background-color: $bright-orange;
+      content: "";
+      transition: 0.3s width;
+    }
+
+    &:hover::after {
+      width: 100%
+    }
+  }
+  
+  &__link {
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+//////////////////////////////////////////
+/* COURSE & CAMPUS & FACILITIES SECTION */
+
+.container {
+  padding-top: 100px;
+  width: 80%;
+  margin: auto;
+}
+
+.course-section {
+
+  &__courses-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__course {
+    width: 300px;
+    padding: 20px 12px;
+    background-color: #fff3f3;
+    border-radius: 10px;
+    margin-top: 5%;
+    box-sizing: border-box;
+    transition: 0.3s box-shadow;
+  }
+  
+  &__course:last-child {
+    margin-bottom: 0;
+  }
+  
+  &__course:hover {
+    box-shadow:  0 0 20px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+}
+
+.campuse-section {
+
+  &__campuses-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__campuse {
+    width: 300px;
+    position: relative;
+    margin-top: 5%;
+  }
+  
+  &__campuse-img {
+    display: block;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  &__campuse h3 {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    font-size: 26px;
+    transform: translateX(-50%);
+    opacity: 0;
+    color: #fff;
+    transition: 0.5s;
+  }
+  
+  &__campuse:hover h3 {
+    opacity: 1;
+    bottom: 50%;
+  }
+
+  &__upper-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: 0.5s;
+  }
+  
+  &__upper-layer:hover {
+    background-color: rgba(226, 0, 0, 0.7);
+  }
+}
+
+
+.facility-section {
+  &__facilities-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__facility {
+    width: 300px;
+    margin-top: 5%;
+  }
+
+  &__facility h3 {
+    margin-top: 20px;
+  }
+
+  &__facility-img {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+
+.feedback-section {
+  &__feedbacks-list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__feedback {
+    display: flex;
+    flex-basis: 48%;
+    min-width: 300px;
+    margin-top: 5%;
+    background-color: #fff3f3;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+
+  &__user-img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-right: 25px;
+  }
+  
+  &__user-info p {
+    text-align: left;
+  }
+  
+  &__user-info h3 {
+    margin: 10px 0 10px 0;
+  }
+  
+  .fa-star, .fa-star-half {
+    color: $bright-orange;
+  }
+}
+
+
+.enroll-section {
+  margin: 100px auto 0 auto;
+  border-radius: 20px;
+  width: 80%;
+  height: 500px;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("/images/banner2.jpg");;
+  position: relative;
+
+  &__enroll-content {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__enroll-content h1 {
+    text-align: center;
+    color: #fff;
+  }
+
+  &__enroll-content a {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 15px 20px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.footer {
+  margin-top: 5%;
+  width: 80%;
+  margin: 100px auto 0 auto;
+  text-align: center;
+
+  .fa-brands, .fa-heart {
+    color: $bright-orange;
+  }
+}
+
+

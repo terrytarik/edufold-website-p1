@@ -1,0 +1,90 @@
+@media (max-width: 385px) {
+  .course-container, .campuse-container, .facilities-container, .feedback-container {
+    width: 100%;
+  }
+
+  .course-container h1, .campuse-container h1, .facilities-container h1, .feedback-container h1 {
+    font-size: 25px;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+  
+  .enroll-content h1 {
+    font-size: 20px;
+  }
+
+  .course-container p, .campuse-container p, .facilities-container p, .feedback-container p{
+    color: #777;
+    font-size: 12px;
+  }
+
+  .course, .campuse, .facility, .feedback {
+    width: 250px;
+  }
+
+  .feedback {
+    min-width: 0;
+  }
+  .feedback h3 {
+    font-size: 15px;
+  }
+
+  .campuse {
+    width: 250px;
+  }
+
+  .campuse h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    overflow: hidden;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 0;
+     right: -150px;
+    height: 100vh;
+    width: 150px;
+    background-color: #f44336;
+    transition: 0.5s;
+  }
+  
+  nav .fa-bars {
+    display: block;
+    color: #fff;
+    font-size: 22px;
+    margin: 10px 0 0 10px;
+  }
+
+  nav .fa-xmark {
+    display: block;
+    color: #fff;
+    font-size: 22px;
+    margin: 10px 0 0 10px;
+  }
+
+  .nav-links ul{
+    flex-direction: column;
+  }
+
+  .nav-links ul li{
+    margin: 25px 0 0 10px;
+  } 
+  
+  .text-box h1 {
+    font-size: 32px;
+  } 
+}
+
+@media (max-width: 800px) {
+  #courses, #campuses, #facilities, #feedbacks {
+    flex-direction: column;
+    align-items: center;
+  }
+}
